@@ -1,0 +1,1 @@
+# Turma_codicum_KodeKolesh_2025
