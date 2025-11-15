@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    image: legal-docs-backend:latest
+    environment:
+      FLASK_DEBUG: "0"
+      AWS_ENABLED: "true"        # set to false if AWS not desired
+      AWS_REGION: "ap-southeast-2"
+      AWS_S3_BUCKET: "legalchain-documents-2025"
+      SECRET_KEY: "change-me-in-prod"
+    ports:
+      - "5000:5000"
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      args:
+        REACT_APP_API_BASE: "http://localhost:5000/api"
+        REACT_APP_ETH_CHAIN_ID: "11155111"
+        REACT_APP_ETH_CONTRACT: "0x3A0744a6F08e977682e3D0783D03690afb4271D0"
+    image: legal-docs-frontend:latest
+    depends_on:
+      - backend
+    ports:
+      - "8080:80"
+    restart: unless-stopped
+
+networks:
+  default:
+    name: legal-docs-net

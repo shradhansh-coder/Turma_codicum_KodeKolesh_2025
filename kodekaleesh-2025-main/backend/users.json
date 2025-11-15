@@ -1,0 +1,16 @@
+{
+  "users": [
+    {
+      "id": "u00001",
+      "email": "rarchit101@gmail.com",
+      "password_hash": "scrypt:32768:8:1$kBtjCgoW4JoX7tJA$83ed2648e9af0484d72b2e7f09b9f22580dc10b67a5a342fb56639150c3129df1a22cff15eea0501a5f3349b35b055e0dc4d24adfdf11160b5b91377b816e0f9",
+      "created_at": "2025-11-14T08:49:45.170990"
+    },
+    {
+      "id": "u00002",
+      "email": "aws@test.local",
+      "password_hash": "scrypt:32768:8:1$dmN96H5S5roCKYHC$aea0b73a306cf6530467fcd97660f99c4afa7a05c7e77100e4a000d001da61ca0f7c5747a6fa3df86f162339d714d8672c4cc33c04117060a97535f7ea0a68e1",
+      "created_at": "2025-11-14T09:07:51.989370"
+    }
+  ]
+}

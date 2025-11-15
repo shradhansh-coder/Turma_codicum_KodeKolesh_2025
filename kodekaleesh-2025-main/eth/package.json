@@ -1,0 +1,17 @@
+{
+  "name": "proof-registry",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "compile": "hardhat compile",
+    "deploy:sepolia": "hardhat run --network sepolia scripts/deploy.js",
+    "deploy:localhost": "hardhat run scripts/deploy.js"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "hardhat": "^2.22.12"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5"
+  }
+}
